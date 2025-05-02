@@ -37,6 +37,7 @@ nav > .wrapper {
 .menu ul {
     display: flex;
     list-style-type: none;
+    align-items: center;
     margin: 0px;
     padding: 0px;
     justify-content: space-between;
@@ -181,6 +182,15 @@ header {
     text-align: justify;
 }
 
+.typing-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px; /* sesuaikan dengan teks lain */
+    line-height: 1.2; /* atur agar tidak terlalu tinggi */
+    min-height: 24px; /* supaya tidak lompat saat mengetik */
+    white-space: nowrap;
+}
+
 .about-text {
     display: flex;
     flex-direction: column;
@@ -204,6 +214,11 @@ header {
     padding: 20px 0 20px 0;
 }
 
+#typing-text {
+    font-size: 14px;
+    color: #00bfff;
+    text-shadow: 0 4px 4px #000;
+}
 .wrapper .about p {
     flex: 1;
     border: 1px solid;
@@ -467,6 +482,23 @@ footer {
 footer .wrapper {
     padding: 30px 0px 30px 0px;
 }
+
+/* hamburger menu */
+button.hamburger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+button.hamburger-menu i {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+button.hamburger-menu i.icon-close {
+    display: none;
+}
 /* responsive */
 @media screen and (max-width: 1024px) {
     .wrapper {
@@ -686,5 +718,40 @@ footer .wrapper {
     }
     .wrapper span {
         font-size: 14px;
+    }
+
+    /* hamburger menu */
+
+    .menu ul li.button {
+        background-color: rgb(89, 187, 236);
+        text-align: center;
+        border-radius: 20px;
+        padding: 5px 100px 5px 100px;
+        width: 100%;
+        text-decoration: none;
+        color: #fff;
+    }
+    button.hamburger-menu {
+        display: inline;
+    }
+    .menu {
+        display: none;
+    }
+    .tampil {
+        display: inline;
+    }
+    .tampil ul {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.822); /* transparan */
+        width: 100%;
+        position: fixed;
+        top: 110px;
+        left: 0;
+        padding: 0px 20px 20px 20px;
+    }
+
+    .tampil ul li {
+        width: 100%;
+        padding: 10px 20px 10px 20px;
     }
 }
